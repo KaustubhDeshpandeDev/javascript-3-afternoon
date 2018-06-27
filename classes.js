@@ -1,4 +1,4 @@
-/* 
+/*
   Once you complete a problem, refresh ./classes.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
@@ -29,24 +29,25 @@
   Call your class Employee and receive all the data in the constructor in the order listed above.
 */
 
-class Employee{
-    constructor(first_name, last_name, email, age){
-      this.first_name = first_name;
-      this.last_name = last_name;
-      this.email = email;
-      this.age = age;
-    }
+
+
+class Employee {
+  constructor(first_name, last_name, email, age){
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+  }
+
     makeWidget(){
-      return (`${this.first_name} ${this.last_name} Widget`);
-    }
+      return this.first_name + ' ' + this.last_name + ' Widget';
+  }
 }
 
-var kaustubh = new Employee("kaustubh", "deshpande", "kd@gamil.com", 22);
-
-console.log(kaustubh);
 
 
 
+let guy = new Employee("Kaustubh","test","test@gmail.com",22)
 
 
 ////////// PROBLEM 2 //////////
@@ -65,20 +66,25 @@ console.log(kaustubh);
   Call your new class Manager
 */
 
-class Manager extends Employee{
-  constructor(first_name,last_name,email,age,reports){
-    super(first_name, last_name,email,age)
+//Code Here
+
+class Manager extends Employee {
+  constructor(first_name, last_name, email, age, reports){
+    super(first_name, last_name, email, age)
     this.reports = [];
   }
+
   hire(employee){
-    this.reports.push(employee);
+    this.reports.push(employee)
   }
   fire(index){
-    this.reports.splice(index,1);
+
+    this.reports.splice(index,1)
   }
 }
+var num1 = new Manager("Kaustubh","test","test@test.com",15, "test")
 
-var newManager = new Manager("test","manager","testman@gmail.com",45,[]);
+
 
 ////////// PROBLEM 3 //////////
 
@@ -102,10 +108,8 @@ var newManager = new Manager("test","manager","testman@gmail.com",45,[]);
   Call your new class ProgressiveManager
 */
 
-class ProgressiveManager extends Employee{
-  constructor(first_name, last_name, email,age,report,title,bonus)
-  
-}
+//Code Here
+
 
 
 ////////// PROBLEM 4 - Black Diamond //////////
@@ -132,5 +136,3 @@ class ProgressiveManager extends Employee{
 */
 
 //Code Here
-
-

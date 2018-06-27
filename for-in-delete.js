@@ -11,25 +11,25 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-var values = {
-  one: 'These',
-  two: ' are',
-  three: ' the',
-  four: ' property',
-  five: ' values.'
-} 
+ var values = {
+   one: 'These',
+   two: ' are',
+   three: ' the',
+   four: ' property',
+   five: ' values.'
+ }
 
-for(var key in values) {
-  console.log(values[key])
-}
+ for(var key in values) {
+   console.log(values[key])
+ }
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
-for(var key in values) {
-  console.log(key)  
-}
+// for(var key in values) {
+//   console.log(key)
+// }
 
 
 
@@ -40,25 +40,31 @@ for(var key in values) {
 */
 
 function showValues( obj ) {
-    var sentence;
-    for (var key in obj){
-        sentence += (obj[key]);
-    }
-    return sentence;
+  var str = "";
+  for(var prop in obj){
+  str = str + obj[prop]
 }
-
+return str
+}
 
 
 ////////// PROBLEM 2 //////////
 
 /*
-  Write a function called greaterThan10 that takes in an object. 
-  Write a for in loop that loops over the object and changes any value that is great than 10 to 0. 
+  Write a function called greaterThan10 that takes in an object.
+  Write a for in loop that loops over the object and changes any value that is great than 10 to 0.
   Return the updated object.
 */
 
 //Code Here
-
+function greaterThan10(OoOo){
+  for(var key in OoOo){
+    if (OoOo[key] > 10){
+          OoOo[key]= 0
+    }
+  }
+  return OoOo
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -87,9 +93,9 @@ function showValues( obj ) {
 
 
 
-/* 
-  Sometimes it's needed to delete object properties. 
-  All you need is the word delete before a reference to the object property value. 
+/*
+  Sometimes it's needed to delete object properties.
+  All you need is the word delete before a reference to the object property value.
   Uncomment the example below to see a for in loop deleting all the properties inside an object.
 */
 
@@ -162,5 +168,3 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
-
